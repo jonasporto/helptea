@@ -1,0 +1,5 @@
+<%= form_tag({ controller: :search, action: :index }, method: :get, remote: true) do %>
+  <%= label_tag(:q, "Search") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>

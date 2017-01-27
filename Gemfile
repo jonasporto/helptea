@@ -32,6 +32,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# A Ruby client library for Redis.
+gem 'redis'
+# Organize redis under one application-wide namespace.
+gem 'redis-namespace'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # A Ruby client library for Redis.
-gem 'redis'
+gem 'redis-rails'
 # Organize redis under one application-wide namespace.
 gem 'redis-namespace'
 # Rubyish interface to Redis, by mapping Redis data types to Ruby objects

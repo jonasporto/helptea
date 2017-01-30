@@ -1,0 +1,24 @@
+<div class="header">
+ <span class="link">
+ 	<%=link_to("Back to the search", search_index_path, "data-turbolinks": "false") %>
+ 	<%=link_to("Clear all stats", search_clear_path, "data-turbolinks": "false") %>
+ </span>
+</div>
+<div class="stats">
+<table>
+  <thead>
+    <tr>
+      <th class="left-text">Query</th>
+      <th>Hits</th>
+    </tr>
+  </thead>
+  <tbody>
+	  <% @stats.each do |k, v|%>
+	    <tr>
+	      <td class="left-text"><%= k.titleize %> </td>
+	      <td><%= v.to_i %> </td>
+	    </tr>
+	  <% end %>
+  </tbody>
+</table>
+</div>

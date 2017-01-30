@@ -1,28 +1,28 @@
-<main class="">
+<%= link_to("Click here, to see stats", search_stats_path, class: "see-stats") %>
 
-  <div class="home__image-wrap">
-    <div class="home__image"></div>
-  </div>
-  
-  <h1 class="home__heading">HelpTea, find help and take a tea.</h1>
-  
-  <div class="home__search-wrap">
-    <%= form_tag({ controller: :search, action: :index }, method: :get, remote: true) do %>
-    <%= 
-       search_field_tag(
-         :query, nil, class: 'home__search', placeholder: 'How may I help you?', autofocus: true, autocomplete: 'off'
-       ) 
-    %>
+<div class="home__image-wrap">
+  <div class="home__image"></div>
+</div>
 
-    <%= 
-        label_tag :query do 
-          concat content_tag(:span, 'Search For...', class: 't-hidden')
-        end 
-    %>
-    <%= submit_tag("", id: 'search_submit', class: 'home__search__icon') %>
+<h1 class="home__heading">HelpTea, find help and take a tea.</h1>
 
-    <% end %>
-  </div>
-</main>
+<div class="home__search-wrap">
+  <%= form_tag({ controller: :search, action: :index }, method: :get, remote: true) do %>
+  <%= 
+     search_field_tag(
+       :query, nil, class: 'home__search', placeholder: 'How may I help you?', autofocus: true, autocomplete: 'off'
+     ) 
+  %>
+
+  <%= 
+      label_tag :query do 
+        concat content_tag(:span, 'Search For...', class: 't-hidden')
+      end 
+  %>
+  <%= submit_tag("", id: 'search_submit', class: 'home__search__icon') %>
+
+  <% end %>
+</div>
 
 <div class="results"></div>
+

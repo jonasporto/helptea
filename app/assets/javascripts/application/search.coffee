@@ -30,7 +30,6 @@ class @App.Search
     @form.submit()
 
   showSearchingStatus: ->
-    return false if @el.val().trim() == ""
     @results
       .addClass('active')
       .html("Searching for '" + @el.val().trim() + "'...")

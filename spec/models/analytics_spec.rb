@@ -4,7 +4,7 @@ describe Analytics do
 
   describe ".track" do
 
-    it "should store a query" do
+    it "does store a query" do
       Analytics.track(id: 1, query: 'how to', results_count: 10)
 
       Analytics.update_stats!
@@ -13,7 +13,7 @@ describe Analytics do
       expect(stats).to eq([["how to", 1.0]])
     end
 
-    it "shouldn't double hit a query for a same user for while" do
+    it "doesn't double hit a query for a same user for while" do
       Analytics.track(id: 1, query: 'how to', results_count: 10)
       Analytics.update_stats!
 
@@ -25,7 +25,7 @@ describe Analytics do
       expect(stats).to eq([["how to", 1.0]])
     end
 
-    it "allow double hit a query for a same user after a while" do
+    it "does double hit a query for a same user after a while" do
       Analytics.track(id: 1, query: 'how to', results_count: 10)
       Analytics.update_stats!
 
@@ -43,7 +43,7 @@ describe Analytics do
   
   describe '.update_stats!' do
 
-    it "should build a sentence removing segments" do
+    it "does build a sentence removing segments" do
         
       queries.each do |query|
         Analytics.track(id: 1, query: query, results_count: 10)
@@ -59,7 +59,7 @@ describe Analytics do
       expect(stats).to eq(result)
     end
 
-    it "should remove segments already stored in stats" do
+    it "does remove segments already stored in stats" do
       
       queries.each do |query|
         Analytics.track(id: 1, query: query, results_count: 10)
@@ -78,7 +78,7 @@ describe Analytics do
 
   describe '.stats_all' do
 
-    it "should return ordered by the highest frequency" do
+    it "does return ordered by the highest frequency" do
       # first user
       queries.each do |query|
         Analytics.track(id: 1, query: query, results_count: 10)
@@ -100,7 +100,7 @@ describe Analytics do
 
   describe '.clear_stats!' do
 
-    it "should return ordered by the highest frequency" do
+    it "does return ordered by the highest frequency" do
       # first user
       queries.each do |query|
         Analytics.track(id: 1, query: query, results_count: 10)

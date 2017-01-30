@@ -1,10 +1,18 @@
 class SearchController < ApplicationController
+
+  after_action :track, only: :index
+
   def index
-    track_event(:search, request)
+    @stats = Analytics.stats_all
   end
 
   private
-  def track_event(event, request)
-    Analytics.track_event(event, request)
+  
+  def track
+    Analytics.track(
+      id:  request.remote_ip,
+      query:  request.query_parameters[:query],
+      results_count: 0
+    )
   end
 end

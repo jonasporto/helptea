@@ -1,0 +1,116 @@
+@import 'fonts'
+
+* 
+  margin: 0
+  padding: 0
+  border: 0
+
+body
+  background-color: #00A9E8
+  color: #000000
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size: 100%
+
+main
+  display: block
+
+.home__image-wrap
+  position: absolute
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: -1
+
+.home__image
+  height: 100%
+  background-image: url(/circuit-board.svg)
+  background-size: 250px auto
+  background-position: center bottom
+  opacity: .1
+
+.home__heading
+  margin-right: auto
+  margin-left: auto
+  position: relative
+  width: 90%
+  font-weight: 200
+  line-height: 1.2
+  text-align: center
+  color: white
+  z-index: 1
+
+h1 
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif
+
+
+.home__heading 
+  margin-bottom: 60px
+  padding-top: 100px
+  max-width: 780px
+  font-size: 70px
+
+.home__search-wrap
+  margin-right: auto
+  margin-left: auto
+  position: relative
+  width: 90%
+  max-width: 780px
+
+.home__search
+  margin-bottom: 45px
+  padding-right: 48px
+  box-shadow: 0 0 0px 5px rgba(20,28,34,0.1)
+  box-sizing: border-box
+  width: 100%
+  font-size: 18px
+
+.home__search
+  padding: 10px
+  background: #fff
+  border: none
+  border-radius: 5px
+  font-weight: 300
+  color: #00A9E8
+  outline: none
+
+  &::-webkit-search-cancel-button
+    -webkit-appearance: none
+
+.t-hidden
+  position: absolute !important
+  height: 1px
+  width: 1px
+  overflow: hidden
+  clip: rect(1px, 1px, 1px, 1px)
+
+.home__search__icon
+  top: 10px
+  right: 10px
+  border: none
+  background-color: transparent
+  font-size: 18px
+  font-family: "icomoon"
+  color: #00A9E8
+
+.home__search__icon 
+  position: absolute
+  cursor: pointer
+
+::-webkit-input-placeholder
+  color: #00A9E8
+
+.results
+  display: none
+  margin-right: auto
+  margin-left: auto
+  position: relative
+  width: 90%
+  max-width: 780px
+  background: #fff
+  color: #00A9E8
+  padding: 14px 10px
+  box-sizing: border-box
+  font-size: 16px
+    
+  &.active
+    display: block

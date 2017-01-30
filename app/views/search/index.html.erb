@@ -1,5 +1,24 @@
-<%= form_tag({ controller: :search, action: :index }, method: :get, remote: true) do %>
-  <%= label_tag(:q, "Search") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
+<main class="">
+
+  <div class="home__image-wrap">
+    <div class="home__image"></div>
+  </div>
+  
+  <h1 class="home__heading">HelpTea, find help and take a tea.</h1>
+  
+  <div class="home__search-wrap">
+    <%= form_tag({ controller: :search, action: :index }, method: :get, remote: true) do %>
+    <%= 
+       search_field_tag(
+         :query, nil, class: 'home__search', placeholder: 'How may I help you?', autofocus: true, autocomplete: 'off'
+       ) 
+    %>
+
+    <%= label_tag :query { concat content_tag(:span, 'Search For...', class: 't-hidden') } %>
+    <%= submit_tag("", id: 'search_submit', class: 'home__search__icon') %>
+
+    <% end %>
+  </div>
+</main>
+
+<div class="results"></div>

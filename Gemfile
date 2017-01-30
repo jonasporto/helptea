@@ -36,6 +36,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'redis'
 # Organize redis under one application-wide namespace.
 gem 'redis-namespace'
+# Rubyish interface to Redis, by mapping Redis data types to Ruby objects
+gem 'redis-objects'
+
+# Background Jobs
+gem 'sidekiq'
+# Recurring Jobs
+gem 'sidetiq'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

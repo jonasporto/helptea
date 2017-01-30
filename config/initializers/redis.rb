@@ -5,4 +5,4 @@ $redis = if Rails.env.production?
            Redis.new
          end
 
-$redis = Redis::Namespace.new(:helptea, :redis => $redis)
+#$redis = Redis::Namespace.new(:helptea, :redis => $redis)

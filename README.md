@@ -1,3 +1,3 @@
 # HelpTea
 
-A rails app to track search queries and generate analytics, check [about](About.md) to see more about.
+A Simple Rails app to track search queries and generate analytics, check [about](About.md) to see more about.

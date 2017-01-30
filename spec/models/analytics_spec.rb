@@ -46,7 +46,7 @@ describe Analytics do
     it "should build a sentence removing segments" do
         
       queries.each do |query|
-          Analytics.track(id: 1, query: query, results_count: 10)
+        Analytics.track(id: 1, query: query, results_count: 10)
       end
 
       Analytics.update_stats!
@@ -62,8 +62,8 @@ describe Analytics do
     it "should remove segments already stored in stats" do
       
       queries.each do |query|
-          Analytics.track(id: 1, query: query, results_count: 10)
-          Analytics.update_stats!
+        Analytics.track(id: 1, query: query, results_count: 10)
+        Analytics.update_stats!
       end
 
       stats = Analytics.stats_all
@@ -81,7 +81,7 @@ describe Analytics do
     it "should return ordered by the highest frequency" do
       # first user
       queries.each do |query|
-          Analytics.track(id: 1, query: query, results_count: 10)
+        Analytics.track(id: 1, query: query, results_count: 10)
       end
 
       # second user
@@ -103,7 +103,7 @@ describe Analytics do
     it "should return ordered by the highest frequency" do
       # first user
       queries.each do |query|
-          Analytics.track(id: 1, query: query, results_count: 10)
+        Analytics.track(id: 1, query: query, results_count: 10)
       end
 
       # second user

@@ -244,4 +244,4 @@ end
 
 ```
 
-Check a live version at [Heroku](https://helptea.herokuapp.coml)
+Check a live version at [Heroku](https://helptea.herokuapp.com)

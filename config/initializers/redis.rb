@@ -1,6 +1,5 @@
 $redis = if Rails.env.production?
-           uri = URI.parse(ENV["REDIS_URL"])
-           Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+           Redis.new(url: ENV["REDIS_URL"])
          else
            Redis.new
          end

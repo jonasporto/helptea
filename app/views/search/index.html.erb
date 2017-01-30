@@ -14,7 +14,11 @@
        ) 
     %>
 
-    <%= label_tag :query { concat content_tag(:span, 'Search For...', class: 't-hidden') } %>
+    <%= 
+        label_tag :query do 
+          concat content_tag(:span, 'Search For...', class: 't-hidden')
+        end 
+    %>
     <%= submit_tag("", id: 'search_submit', class: 'home__search__icon') %>
 
     <% end %>

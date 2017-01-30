@@ -21,7 +21,5 @@ class SearchController < ApplicationController
       query:  request.query_parameters[:query],
       results_count: 0
     )
-
-    Analytics.update_stats!
   end
 end

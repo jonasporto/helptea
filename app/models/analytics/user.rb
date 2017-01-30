@@ -14,7 +14,7 @@ class Analytics::User
   end
 
   def queries
-    @_queries ||= query.members.sort - processed.members
+    @_queries ||= query.members - processed.members
   end
 
   def clear_queries!

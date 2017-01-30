@@ -1,2 +1,2 @@
-web: bundle exec unicorn -p $PORT
+web: bundle exec rails server -p $PORT
 worker: bundle exec sidekiq

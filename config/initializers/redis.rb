@@ -1,8 +1,8 @@
-
-uri = URI.parse(ENV["REDISTOGO_URL"])
-
 $redis = if Rails.env.production?
-           Redis::Namespace.new(:helptea, Redis.new(:host => uri.host, :port => uri.port, :password => uri.password))
+           uri = URI.parse(ENV["REDISTOGO_URL"])
+           Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
          else
-           Redis::Namespace.new(:helptea, :redis => Redis.new)
+           Redis.new
          end
+
+$redis = Redis::Namespace.new(:helptea, :redis => $redis)

@@ -7,7 +7,7 @@ class Analytics::Query
 
   def self.track(id: 0, query:, results_count:)
     user = Analytics::User.new(id)
-    user.query << query.downcase
+    user.query << query.to_s.downcase
     self << id
   end
   

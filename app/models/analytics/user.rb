@@ -25,6 +25,6 @@ class Analytics::User
   end
 
   def self.find(user_id)
-  	new(user_id)
+    new(user_id)
   end
 end
